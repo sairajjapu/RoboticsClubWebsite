@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Robotics Club of GCET, fostering innovation and learning in robotics and technology.">
+    <meta name="keywords" content="Robotics, GCET, Engineering, Technology, Innovation">
+    <title>Robotics Club - GCET</title>
+    <link rel="icon" href="https://robotica.roboticsclubgcet.org/img/logo1.png" alt="Logo">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="CSS/Contactstyle.css">  
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="Script/Burger.js"></script>
+    <script src="Script/Contactscript.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#"><img src="https://robotica.roboticsclubgcet.org/img/RClogo1.jpg" alt="Robotics Club Logo" loading="lazy"></a>
+            <h1><a href="#" style="color: #f1f1f1; text-decoration: none;">ROBOTICS CLUB</a></h1>
+        </div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="https://robotica.roboticsclubgcet.org/index.html" target="_blank">Events</a>
+            <a href="projects.html">Projects</a>
+            <a href="Our_Team.html">Our Team</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="burger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <h1>Contact</h1>
+            <p>Home / Contact us</p>
+        </div>
+    </section>
+
+    <!-- Main Contact Section -->
+    <main>
+        <section class="contact">
+            <h1 style="padding-top: 50px;">If You Have Any Query,<br> Please Contact Us</h1>
+            <div class="contact-container">
+                <h2>Feel Free to Ask</h2><br>
+                <?php if (!empty($resultMessage)) echo $resultMessage; ?>
+                <form action="contact_process.php" method="post">
+                    <input type="text" name="name" id="name" required placeholder="Enter your Name">
+                    <input type="email" name="email" id="email" required placeholder="Enter your College Email">
+                    <input type="text" name="subject" id="subject" required placeholder="Subject of the Message">
+                    <textarea id="message" name="message" required placeholder="Write your Message here"></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            <div class="logo">
+                <a href="#"><img src="https://robotica.roboticsclubgcet.org/img/RClogo1.jpg" alt="Robotics Club Logo"></a>
+                <h1><a href="#" style="color: #f1f1f1; text-decoration: none;">ROBOTICS CLUB</a></h1>
+            </div>
+            <div class="address">
+                <h2>Get In Touch</h2><br>
+                <p><i class="fas fa-map-marker-alt"></i>
+                    <a href="https://www.google.com/maps" target="_blank">
+                        Geethanjali College of Engineering and Technology, Telangana, India, 501301
+                    </a>
+                </p>
+                <p><i class="fas fa-phone-alt"></i> +91 9704051435</p>
+                <p><i class="fas fa-envelope"></i><a href="mailto:robotics@gcet.edu.in" target="_blank">robotics@gcet.edu.in</a></p>
+            </div>
+        </div>
+        <div><br><hr><br>
+            <p>&copy; 2024 Robotics Club, GCET</p>
+            <p><a href="https://www.linkedin.com/in/sairaj-japu-6a04842a0/" target="_blank">Designed By J.Sairaj</a></p>
+            <div class="social-media">
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
