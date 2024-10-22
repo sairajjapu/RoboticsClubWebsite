@@ -4,7 +4,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    justify-content: center;
   }
 
   html {
@@ -17,7 +16,6 @@
     align-items: center;
     font-family: 'Arial', sans-serif;
     font-size: 16px;
-    justify-content: center;
   }
 
   /* Full-screen preloader with logo */
@@ -170,7 +168,7 @@
 
       /*About Section*/
       .about {
-        display:grid;
+        display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 2rem;
         padding: 4rem 2rem;
