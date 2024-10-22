@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    justify-content: center;
   }
 
   html {
@@ -169,16 +170,26 @@
 
       /*About Section*/
       .about {
-        display:grid;
+        display: flex;
+        flex-direction: column; /* Align items in a column */
+        align-items: center; /* Center the card-container horizontally */
+        justify-content: center; /* Center the card-container vertically */
+        height: 100vh; /* Make the section take the full viewport height */
+        padding: 4rem 2rem;
+        text-align: center; /* Ensure content inside the section is centered */
+    }
+
+    .card-container {
+        display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 2rem;
-        padding: 4rem 2rem;
-        align-items: center; /* Centers items vertically */
-        justify-items: center; /* Centers items horizontally */
-        justify-content: center; /* Ensures the grid itself is centered */
-      }
-      
-      .card {
+        justify-content: center; /* Center the grid itself */
+        width: 100%; /* Ensure the grid takes the full width */
+        max-width: 1200px; /* Add a max width to keep it centered and within limits */
+        align-items: center; /* Center the content inside each grid item */
+    }
+
+    .card {
         background-color: rgba(173, 216, 230, 0.2);
         padding: 2rem;
         border-radius: 10px;
@@ -186,21 +197,21 @@
         transform: translateY(10vh);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         text-align: center; /* Ensures text inside the card is centered */
-      }
-      
-      .card:hover {
+    }
+
+    .card:hover {
         transform: translateY(2px);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-      }
-      
-      .card h3 {
+    }
+
+    .card h3 {
         font-size: 2rem;
         margin-bottom: 1rem;
-      }
-      
-      .card p {
+    }
+
+    .card p {
         line-height: 1.6;
-      }
+    }
       
 
   /***Button***/
