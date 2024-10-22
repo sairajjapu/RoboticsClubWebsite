@@ -16,6 +16,7 @@
     align-items: center;
     font-family: 'Arial', sans-serif;
     font-size: 16px;
+    justify-content: center;
   }
 
   /* Full-screen preloader with logo */
@@ -129,7 +130,6 @@
         text-align: center;
         padding: 1rem;
         overflow: hidden;
-        animation: fadeIn 1.5s ease-in-out;
       }
 
       .hero h1 {
@@ -168,38 +168,40 @@
       }
 
       /*About Section*/
-  .about {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 4rem 2rem;
-    align-items: center;
-    justify-items: center;
-  }
-  
-  .card {
-    background-color: rgba(173, 216, 230, 0.2);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    transform: translateY(10vh);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center; 
-  }
-
-  .card:hover {
-    transform: translateY(2px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-  }
-
-  .card h3 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-
-  .card p {
-    line-height: 1.6;
-  }
+      .about {
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 4rem 2rem;
+        align-items: center; /* Centers items vertically */
+        justify-items: center; /* Centers items horizontally */
+        justify-content: center; /* Ensures the grid itself is centered */
+      }
+      
+      .card {
+        background-color: rgba(173, 216, 230, 0.2);
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        transform: translateY(10vh);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center; /* Ensures text inside the card is centered */
+      }
+      
+      .card:hover {
+        transform: translateY(2px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+      }
+      
+      .card h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      
+      .card p {
+        line-height: 1.6;
+      }
+      
 
   /***Button***/
   .button-33 {
