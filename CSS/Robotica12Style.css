@@ -1,0 +1,131 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+      background: linear-gradient(135deg, #f0f8ff, #e0ffff); /* Light cyan gradient */
+      color: #121212;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    background-color:#4682B4;
+    color: #f1f1f1;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .navbar .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar .logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: -15px;
+    transition: transform 0.5s ease; /* Smooth animation */
+  }
+
+  .navbar .logo img:hover {
+        transform: rotate(360deg) scale(1.1); /* Rotate and scale */
+  }
+
+  .navbar a {
+    color: #f1f1f1;
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .navbar a:hover {
+       color: #00b894; /* Light Green for hover */
+  } 
+  /* Hero Section */
+  .hero {
+      margin-top: 50px;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      height: 90vh;
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+                  url('pixelcut-export.jpeg');  
+      color: #f1f1f1;
+      text-align: center;
+      padding: 2rem;
+      animation: fadeIn 1.5s ease-in-out;
+      background-size: cover;
+      background-attachment: fixed; /* Parallax effect */
+      float: left;
+      width: 100%;
+      margin-bottom: 50px;
+  }
+
+  /* Ensure hero text remains responsive */
+  .hero h1 {
+      font-size: 4rem;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+      transform: translateY(-100vh); /* Start from top */
+      animation: slideFromTop 1s ease forwards 0.5s; /* Slide from top */
+  }
+
+  .hero p {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+      transform: translateY(-100vh); /* Start from top */
+      animation: slideFromTop 1.2s ease forwards 1s; /* Slide with a delay */
+  }
+
+  /* Keyframes for slide-in from top animation */
+  @keyframes slideFromTop {
+      0% {
+          opacity: 0;
+          transform: translateY(-100vh); /* Start off-screen at the top */
+      }
+      100% {
+          opacity: 1;
+          transform: translateY(0); /* End at original position */
+      }
+  }
+
+  /* Ensure responsive font scaling */
+  @media screen and (max-width: 768px) {
+      .hero {
+        height: 50vh; /* Reduce height for smaller screens */
+        background-attachment: scroll; /* Disable parallax on mobile */
+        background-size: cover; /* Ensure image covers the section */
+        background-position: center; /* Center background image */
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+      }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15cap;
+    }
+  }
