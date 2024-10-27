@@ -168,8 +168,9 @@
       /*About Section*/
       .about {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         padding: 30px;
+        gap: 2rem;
       }
       
       .card {
@@ -208,6 +209,7 @@
       .card h3 {
         font-size: 2rem;
         margin-bottom: 1rem;
+        color: #4682B4;
       }
       
       .card p {
@@ -269,6 +271,9 @@
   .projects.button-33{
     align-items: center;
   }
+  .projects h1{
+    color: #4682B4;
+  }
 
   .project-card {
     margin: 0 auto; /* Center the card */
@@ -323,7 +328,7 @@
   .gallery h1 {
       font-size: 36px;
       margin-bottom: 30px;
-      color: #333;
+      color: #4682B4;
   }
 
   .gallery-grid {
@@ -383,6 +388,7 @@
     margin-top: 3rem;
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
+    color:#4682B4;
   }
   .Faculty h3,.Student h3{
     font-size: 1.1rem;
