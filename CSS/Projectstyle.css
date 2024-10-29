@@ -407,7 +407,28 @@
 
     .menu a {
         padding: 0.75rem;
-        border-bottom: 1px solid #f1f1f1;
+    }
+    .dropdown-toggle a {
+      padding-top: 10px;
+      border: width 2px;
+    }
+    .dropdown a,.menu a {
+        padding: 0.75rem;
+   }
+    /* Dropdown inside menu */
+    .dropdown-content {
+      margin: 10px;
+      margin-left: 12pc;
+      position:relative;
+      box-shadow: none;
+    }
+
+    .dropdown.show .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: none;
     }
 }
 .dropdown {

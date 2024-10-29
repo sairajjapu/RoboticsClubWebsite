@@ -33,9 +33,3 @@ window.addEventListener('load', function() {
     }, 800); // Delay to match preloader fade-out
   }, 700); // Show logo for 2 seconds
 });
-document.querySelectorAll('.dropdown-toggle').forEach((dropdown) => {
-  dropdown.addEventListener('click', (e) => {
-    e.preventDefault();
-    dropdown.parentElement.classList.toggle('show');
-  });
-});
