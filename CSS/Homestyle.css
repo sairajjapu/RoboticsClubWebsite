@@ -735,3 +735,87 @@
 .dropdown.show .dropdown-content {
   display: block;
 }
+/* Container for the entire notice bar */
+.notice-bar-container {
+  display: flex;
+  align-items: center;
+  background-color: #29A4D6; /* Light blue background color */
+  overflow: hidden;
+  font-size: 18px;
+  font-weight: bold;
+  color: whitesmoke;
+}
+
+/* Static "Updates" label */
+.updates-label {
+  background-color: #007EA7; /* Darker blue for contrast */
+  color: #ffffff;
+  padding: 10px 15px;
+  white-space: nowrap;
+}
+
+/* Scrolling text container */
+.notice-bar {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+/* Scrolling text animation for immediate start */
+.scrolling-text {
+  display: inline-block;
+  animation: scroll-left 40s linear infinite;
+  white-space: nowrap;
+}
+
+/* Keyframes for scrolling from right with a slight offset */
+@keyframes scroll-left {
+  0% {
+      transform: translateX(125%); /* Start at a bit back from the right edge */
+  }
+  100% {
+      transform: translateX(-100%); /* Move fully to the left */
+  }
+}
+
+/* Link styling */
+.scrolling-text a {
+  color: wheat; /* Yellow link color for visibility */
+  text-decoration: none; /* Removes underline */
+}
+
+.scrolling-text a:hover {
+  text-decoration: underline; /* Optional: underline on hover for feedback */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .notice-bar-container {
+      font-size: 16px;
+  }
+
+  .updates-label {
+      padding: 8px 12px;
+  }
+
+  .scrolling-text {
+      animation: scroll-left 14s linear infinite; /* Slightly slower for readability */
+  }
+}
+
+@media (max-width: 480px) {
+  .notice-bar-container {
+      font-size: 14px;
+  }
+
+  .updates-label {
+      padding: 6px 10px;
+  }
+
+  .scrolling-text {
+      animation: scroll-left 25s linear infinite;
+  }
+}
